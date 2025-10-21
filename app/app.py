@@ -10,7 +10,7 @@ import docx
 
 # --- Setup ---
 st.set_page_config(page_title="BERT Extractive Summarizer", layout="wide")
-st.title("🧠 BERT Extractive Text Summarizer")
+st.title("BERT Extractive Text Summarizer")
 
 nltk.download("punkt")
 nltk.download("punkt_tab")
@@ -52,12 +52,12 @@ def summarize_text(text, compression_ratio=0.3):
 
 
 # --- Sidebar options ---
-st.sidebar.header("⚙️ Settings")
+st.sidebar.header(" Settings")
 compression_ratio = st.sidebar.slider("Compression ratio (how short should the summary be)", 0.1, 0.9, 0.3, 0.05)
 show_rouge = st.sidebar.checkbox("Show ROUGE evaluation (if reference provided)", value=False)
 
 # --- File upload or text input ---
-st.subheader("📄 Input Text or Upload a File")
+st.subheader(" Input Text or Upload a File")
 
 uploaded_file = st.file_uploader("Upload a document (.txt, .pdf, .docx)", type=["txt", "pdf", "docx"])
 user_text = st.text_area("Or paste your text here:", height=200)
@@ -76,7 +76,7 @@ else:
     text = user_text
 
 # --- Generate Summary ---
-if st.button("🚀 Summarize"):
+if st.button("Summarize"):
     if not text.strip():
         st.warning("Please enter or upload a document first.")
     else:
@@ -97,4 +97,4 @@ if st.button("🚀 Summarize"):
 
 # --- Footer ---
 st.markdown("---")
-st.caption("Built with ❤️ using Streamlit and Sentence-BERT | by Emmanuel")
+st.caption("Built with ❤️ using Streamlit and Sentence-BERT | by Benjamin")
