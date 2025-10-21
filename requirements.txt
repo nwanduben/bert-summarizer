@@ -1,4 +1,4 @@
-ipykernel
+
 numpy==1.26.4
 pandas
 scikit-learn
@@ -8,9 +8,7 @@ sentence-transformers
 torch==2.2.2
 transformers
 rouge
-matplotlib
 streamlit
-fastapi
 uvicorn
 PyPDF2
 python-docx
